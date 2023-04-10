@@ -1,0 +1,52 @@
+
+# Programs 
+alias v='nvim --startuptime /tmp/nvim-startuptime'
+alias neovim='nvim --startuptime /tmp/nvim-startuptime'
+
+alias em='cd ~/Dropbox/Notebooks/Compendium; emanote run --port=6699'                               # Make ssh work with kitty.
+
+# Lines of code
+alias loc='git ls-files | xargs wc -l'
+
+# Cht.sh
+alias cs='cht.sh'
+alias csh='cht.sh :help'
+alias css='cht.sh --shell'
+
+# Tmux
+alias t='tmux'
+alias tn='tmux new -s '
+alias tls='tmux ls'
+alias ta='tmux attach -t '
+
+# bareback
+alias bareback='/usr/bin/git --git-dir=$QBBAREBACK --work-tree=$HOME'
+alias bb='/usr/bin/git --git-dir=$QBBAREBACK --work-tree=$HOME'
+alias bblg='/usr/bin/lazygit --git-dir=$QBBAREBACK --work-tree=$HOME'
+
+# make ls colorful with icons
+alias ls='lsd'
+
+# Feh Wallpaper Random Reload
+alias wpr='feh --recursive --bg-fill --randomize /usr/share/wallpapers/random'
+
+# Git aliases
+alias gs='git status'
+alias ga='git add'
+alias gp='git push'
+alias gpo='git push origin'
+alias gtd='git tag --delete'
+alias gtdr='git tag --delete origin'
+alias gr='git branch -r'
+alias gplo='git pull origin'
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias gco='git checkout '
+alias gl='git log'
+alias gr='git remote'
+alias grs='git remote show'
+alias glo='git log --pretty="oneline"'
+alias glol='git log --graph --oneline --decorate'
+
+alias sshrpi='ssh pi@192.168.68.131'
