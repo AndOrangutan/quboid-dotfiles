@@ -24,10 +24,14 @@ require('main.error-handling')
 -- Core custom local libraries
 local main = {
   layouts = require("main.layouts"),
-  -- tags    = require("main.tags"),
+  tags    = require("main.tags"),
   -- menu    = require("main.menu"),
   -- rules   = require("main.rules"),
 }
 
 -- Defined layouts
 RC.layouts = main.layouts()
+
+-- Tags mapped to their layout
+RC.tags = main.tags
+
