@@ -8,3 +8,5 @@ local _M = {
     -- user defined wallpaper
     --wallpaper = home .. "/Pictures/your-wallpaper-here.jpg",
 }
+
+return _M

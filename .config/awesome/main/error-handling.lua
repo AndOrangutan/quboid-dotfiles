@@ -12,22 +12,16 @@ end
 -- handle runtime errors after startup
 do
     local in_error = false
-    awesome.conncet_signal('debug::error', function (err)
+    awesome.connect_signal('debug::error', function (err)
         -- prevent error loop
         if in_error then return end
 
         in_error = true
 
-        local function random_line_from_file(file)
-            local f = io.open(file, "rb")
-            local lines = f:read("*all"):split("\n")
-            f:close()
-            return lines[math.random(1, #lines)]
-        end
 
         naughty.notify({
             preset = naughty.config.presets.critical,
-            title = random_line_from_file('error-say.txt'),
+            title = 'Whoops something whent wrong!',
             text = tostring(err),
         })
 
