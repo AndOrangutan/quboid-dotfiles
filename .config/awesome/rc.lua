@@ -11,7 +11,8 @@ local beautiful = require("beautiful")
 local menubar = require("menubar")
 
 RC = {} -- global namespace, on top before require any modules
-RC.vars = require("main.user-variables")
+-- TODO: Pcall this with a notification
+RC.vars = require('user-variables')
 modkey = RC.vars.modkey
 
 -- This is a cool way of doing it in lua, but require is just simpler :p
@@ -25,7 +26,7 @@ require('main.error-handling')
 local main = {
   layouts = require("main.layouts"),
   tags    = require("main.tags"),
-  -- menu    = require("main.menu"),
+  menu    = require("main.menu"),
   -- rules   = require("main.rules"),
 }
 
@@ -35,3 +36,7 @@ RC.layouts = main.layouts()
 -- Tags mapped to their layout
 RC.tags = main.tags
 
+-- Menu
+RC.mainmenu = awful.menu({ items = main.menu() })
+
+menubar.utils.terminal = RC.vars.terminal
