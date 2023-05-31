@@ -30,6 +30,14 @@ local main = {
   rules   = require("main.rules"),
 }
 
+local binding = {
+  globalbuttons = require('binding.globalbuttons'),
+  clientbuttons = require('binding.clientbuttons'),
+  -- globalkeys    = require('binding.globalkeys'),
+  -- bindtotags    = require('binding.bindtotags'),
+  -- clientkeys    = require('binding.clientkeys'),
+}
+
 -- Defined layouts
 RC.layouts = main.layouts()
 
@@ -42,10 +50,13 @@ RC.mainmenu = awful.menu({ items = main.menu() })
 menubar.utils.terminal = RC.vars.terminal
 
 -- Rules
-awful.rules.rules = main.rules(clientkeys, clientbuttons)
+awful.rules.rules = main.rules(clientkeys, binding.clientbuttons())
 -- TODO: change later
 -- awful.rules.rules = main.rules(binding.clientkeys(), binding.clientbuttons())
 
-
 -- signals
 require('main.signals')
+
+-- Set Root
+root.buttons(binding.globalbuttons())
+
