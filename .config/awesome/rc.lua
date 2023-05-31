@@ -27,7 +27,7 @@ local main = {
   layouts = require("main.layouts"),
   tags    = require("main.tags"),
   menu    = require("main.menu"),
-  -- rules   = require("main.rules"),
+  rules   = require("main.rules"),
 }
 
 -- Defined layouts
@@ -40,3 +40,10 @@ RC.tags = main.tags
 RC.mainmenu = awful.menu({ items = main.menu() })
 
 menubar.utils.terminal = RC.vars.terminal
+
+-- Rules
+awful.rules.rules = main.rules(clientkeys, clientbuttons)
+-- TODO: change later
+-- awful.rules.rules = main.rules(binding.clientkeys(), binding.clientbuttons())
+
+
