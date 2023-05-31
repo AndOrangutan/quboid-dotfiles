@@ -47,3 +47,5 @@ awful.rules.rules = main.rules(clientkeys, clientbuttons)
 -- awful.rules.rules = main.rules(binding.clientkeys(), binding.clientbuttons())
 
 
+-- signals
+require('main.signals')
