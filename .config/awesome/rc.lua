@@ -33,9 +33,9 @@ local main = {
 local binding = {
   globalbuttons = require('binding.globalbuttons'),
   clientbuttons = require('binding.clientbuttons'),
-  -- globalkeys    = require('binding.globalkeys'),
-  -- bindtotags    = require('binding.bindtotags'),
-  -- clientkeys    = require('binding.clientkeys'),
+  globalkeys    = require('binding.globalkeys'),
+  clientkeys    = require('binding.clientkeys'),
+  bindtotags    = require('binding.bindtotags'),
 }
 
 -- Defined layouts
@@ -57,6 +57,12 @@ awful.rules.rules = main.rules(clientkeys, binding.clientbuttons())
 -- signals
 require('main.signals')
 
+-- Mouse and key binding
+RC.globalkeys = binding.globalkeys()
+RC.globalkeys = binding.bindtotags(RC.glboalkey) -- extend
+
 -- Set Root
 root.buttons(binding.globalbuttons())
+root.keys(RC.globalkeys)
+
 
