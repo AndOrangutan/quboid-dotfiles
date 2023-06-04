@@ -24,19 +24,26 @@ require('main.error-handling')
 
 -- Core custom local libraries
 local main = {
-  layouts = require("main.layouts"),
-  tags    = require("main.tags"),
-  menu    = require("main.menu"),
-  rules   = require("main.rules"),
+    layouts = require("main.layouts"),
+    tags    = require("main.tags"),
+    menu    = require("main.menu"),
+    rules   = require("main.rules"),
 }
 
 local binding = {
-  globalbuttons = require('binding.globalbuttons'),
-  clientbuttons = require('binding.clientbuttons'),
-  globalkeys    = require('binding.globalkeys'),
-  clientkeys    = require('binding.clientkeys'),
-  bindtotags    = require('binding.bindtotags'),
+    globalbuttons = require('binding.globalbuttons'),
+    clientbuttons = require('binding.clientbuttons'),
+    globalkeys    = require('binding.globalkeys'),
+    clientkeys    = require('binding.clientkeys'),
+    bindtotags    = require('binding.bindtotags'),
 }
+
+local deco = {
+    -- wallpaper   = require('deco.wallpaper'),
+    -- taglist     = require('deco.taglist'),
+    -- tasklist    = require('deco.taswklist'),
+}
+
 
 -- Defined layouts
 RC.layouts = main.layouts()
@@ -65,4 +72,5 @@ RC.globalkeys = binding.bindtotags(RC.glboalkey) -- extend
 root.buttons(binding.globalbuttons())
 root.keys(RC.globalkeys)
 
-
+-- In Signals
+-- require('deco.titlebar')
