@@ -38,11 +38,6 @@ local binding = {
     bindtotags    = require('binding.bindtotags'),
 }
 
-local deco = {
-    -- wallpaper   = require('deco.wallpaper'),
-    -- taglist     = require('deco.taglist'),
-    -- tasklist    = require('deco.taswklist'),
-}
 
 
 -- Defined layouts
@@ -74,3 +69,4 @@ root.keys(RC.globalkeys)
 
 -- In Signals
 -- require('deco.titlebar')
+
