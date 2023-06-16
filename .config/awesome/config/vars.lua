@@ -19,5 +19,6 @@ _M.layouts = {
 }
 
 _M.tags = {'1', '2', '3', '4', '5', '6', '7', '8', '9'}
+_M.tags_layout = {_M.layouts[1], _M.layouts[1], _M.layouts[1], _M.layouts[1], _M.layouts[1], _M.layouts[1], _M.layouts[1], _M.layouts[1], _M.layouts[1]}
 
 return _M
