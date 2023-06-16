@@ -43,10 +43,11 @@ git clone --bare https://github.com/AndOrangutan/quboid-dotfiles $HOME/.quboid-b
 
 - `<Window>`
     - `<Tab>` - [Bling Window Switcher](https://blingcorp.github.io/bling/#/widgets/window_switcher)
+    
 #### Resources
 
 - [raven2cz's setup](https://www.reddit.com/r/unixporn/comments/s74wdg/awesomewm_multicolor_theme_15_best_color_schemes/)
 - [glorious setup](https://github.com/manilarome/the-glorious-dotfiles)
 - [Blink](https://blingcorp.github.io/bling/)
 - [Rubato Animation](https://github.com/andOrlando/rubato)
-
+- [Tutorial](https://epsi-rns.github.io/desktop/2019/06/15/awesome-overview.html)
