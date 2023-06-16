@@ -18,7 +18,7 @@ ruled.client.connect_signal('request::rules', function()
    ruled.client.append_rule{
       id = 'floating',
       rule_any = {
-         instance = {'copyq', 'pinentry'},
+         instance = {'DTA', 'copyq', 'pinentry'},
          class = {
             'Arandr',
             'Blueman-manager',
@@ -56,4 +56,19 @@ ruled.client.connect_signal('request::rules', function()
    --    rule       = {class = 'Firefox'},
    --    properties = {screen = 1, tag = '2'}
    -- }
+    ruled.client.append_rule {
+        rule       = {class = 'Firefox', instance = 'startup' },
+        properties = {screen = 1, tag = '1'}
+    }
+    -- TODO: add email client
+    ruled.client.append_rule({
+        rule = { class = "zoom" },
+        properties = { screen = 1, tag = '5' },
+    })
+    ruled.client.append_rule( {
+        rule = { class = "discord" },
+        properties = { screen = 1, tag = '8'
+            ,
+        }
+    })
 end)

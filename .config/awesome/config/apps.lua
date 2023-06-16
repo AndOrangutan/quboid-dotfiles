@@ -4,6 +4,7 @@ local _M = {
 }
 
 _M.menu_apps = {
+   -- TODO: Add browser, image editor, vscode, etc
    { 'Terminal', _M.terminal },
    { 'Editor', _M.editor },
 }
